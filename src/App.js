@@ -39,7 +39,7 @@ class App extends Component {
           genderSelect={this.genderSelect}
           nationalityChange={this.nationalityChange}
         />
-        <CardGallery />
+        <CardGallery gender={this.state.gender} nationality={this.state.nationality}/>
       </Box>
     );
   }

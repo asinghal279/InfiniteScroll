@@ -1,52 +1,42 @@
-import { Box, Image } from '@chakra-ui/react'
-import React, { Component } from 'react'
+import { Avatar, Box, Divider, Flex, Image, Text } from "@chakra-ui/react";
+import React, { Component } from "react";
 
 export class card extends Component {
-    render() {
-        return (
-            <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-                <Image src="https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg" alt="k" />
-
-                <Box p="6">
-                    <Box d="flex" alignItems="baseline">
-                        <Box
-                            color="gray.500"
-                            fontWeight="semibold"
-                            letterSpacing="wide"
-                            fontSize="xs"
-                            textTransform="uppercase"
-                            ml="2"
-                        >
-                            new
-                    </Box>
-                    </Box>
-
-                    <Box
-                        mt="1"
-                        fontWeight="semibold"
-                        as="h4"
-                        lineHeight="tight"
-                        isTruncated
-                    >
-                        john doe
-                    </Box>
-
-                    <Box>
-                        
-                        <Box as="span" color="gray.600" fontSize="sm">
-                            / wk
-                    </Box>
-                    </Box>
-
-                    <Box d="flex" mt="2" alignItems="center">
-                        <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                         reviews
-                    </Box>
-                    </Box>
-                </Box>
-            </Box>
-        )
-    }
+  render() {
+    return (
+      <Box
+        maxW="sm"
+        borderWidth="1px"
+        borderRadius="lg"
+        overflow="hidden"
+        bg="white"
+        mx={3}
+        my={2}
+        flex="0 0 33.33%"
+      >
+        <Flex p={5} justify="space-between">
+          <Avatar
+            size="xl"
+            name="Christian Nwamba"
+            src={this.props.data.picture.medium}
+          />
+          <Box textAlign="center">
+            <Text>
+              {this.props.data.name.first} {this.props.data.name.first}
+            </Text>
+            <Text>
+              {this.props.data.dob.age} yrs, {this.props.data.gender}
+            </Text>
+          </Box>
+        </Flex>
+        <Divider />
+        <Box>
+          <Text>Phone : {this.props.data.phone}</Text>
+          <Text>Email : {this.props.data.email}</Text>
+        </Box>
+      </Box>
+    );
+  }
 }
 
-export default card
+export default card;
