@@ -1,10 +1,14 @@
+import { Box } from '@chakra-ui/react';
 import './App.css';
+import CardGallery from './cardGallery';
+import Header from './header';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World !</h1>
-    </div>
+    <Box className="App" bg="#282c34">
+      <Header />
+      <CardGallery />
+    </Box>
   );
 }
 
