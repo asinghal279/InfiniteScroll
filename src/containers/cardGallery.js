@@ -38,7 +38,7 @@ class cardGallery extends Component {
     this.setState({ prevY: y });
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     if (this.props !== nextProps) {
       this.setState({
         profiles: [],
