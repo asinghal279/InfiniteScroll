@@ -1,4 +1,4 @@
-import { Avatar, Box, Divider, Flex, Image, Text } from "@chakra-ui/react";
+import { Avatar, Box, Divider, Flex, Text } from "@chakra-ui/react";
 import React, { Component } from "react";
 
 export class card extends Component {

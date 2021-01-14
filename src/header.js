@@ -1,13 +1,9 @@
 import {
-  Box,
   Button,
   Checkbox,
   Flex,
-  flexbox,
   Menu,
   MenuButton,
-  MenuDivider,
-  MenuItemOption,
   MenuList,
   MenuOptionGroup,
   Select,
@@ -19,15 +15,16 @@ class header extends Component {
   render() {
     return (
       <Flex bg="#49505e" justify="center" p={5}>
-        Filters
         <Select
           w="30%"
           placeholder="Select Gender"
           mx={5}
+          color="black"
           onChange={this.props.genderSelect}
+          variant="flushed"
         >
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
         </Select>
         <Menu closeOnSelect={false}>
           <MenuButton as={Button} colorScheme="blue">
@@ -35,7 +32,7 @@ class header extends Component {
           </MenuButton>
           <MenuList minWidth="240px">
             <MenuOptionGroup>
-              <Flex justify="center">
+              <Flex justify="left" ml={4}>
                 <Checkbox
                   value="us"
                   id={0}
@@ -44,7 +41,7 @@ class header extends Component {
                   USA
                 </Checkbox>
               </Flex>
-              <Flex justify="center">
+              <Flex justify="left" ml={4}>
                 <Checkbox
                   value="dk"
                   id={1}
@@ -53,7 +50,7 @@ class header extends Component {
                   Denmark
                 </Checkbox>
               </Flex>
-              <Flex justify="center">
+              <Flex justify="left" ml={4}>
                 <Checkbox
                   value="fr"
                   id={2}
@@ -62,7 +59,7 @@ class header extends Component {
                   France
                 </Checkbox>
               </Flex>
-              <Flex justify="center">
+              <Flex justify="left" ml={4}>
                 <Checkbox
                   value="gb"
                   id={3}
