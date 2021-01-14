@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "./card";
+import Card from "../components/card";
 import axios from "axios";
 import { Flex } from "@chakra-ui/react";
 

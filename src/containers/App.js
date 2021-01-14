@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import "./App.css";
 import CardGallery from "./cardGallery";
-import Header from "./header";
+import Header from "../components/header";
 
 import React, { Component } from "react";
 
