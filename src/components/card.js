@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 export class card extends Component {
   render() {
+    const { picture, name, gender, dob, phone, email } = this.props.data;
     return (
       <Box
         maxW="sm"
@@ -15,24 +16,20 @@ export class card extends Component {
         flex="0 0 33.33%"
       >
         <Flex p={5} justify="space-between">
-          <Avatar
-            size="xl"
-            name="Christian Nwamba"
-            src={this.props.data.picture.medium}
-          />
+          <Avatar size="xl" name="Christian Nwamba" src={picture.medium} />
           <Box textAlign="center">
             <Text>
-              {this.props.data.name.first} {this.props.data.name.first}
+              {name.first} {name.first}
             </Text>
             <Text>
-              {this.props.data.dob.age} yrs, {this.props.data.gender}
+              {dob.age} yrs, {gender}
             </Text>
           </Box>
         </Flex>
         <Divider />
         <Box>
-          <Text>Phone : {this.props.data.phone}</Text>
-          <Text>Email : {this.props.data.email}</Text>
+          <Text>Phone : {phone}</Text>
+          <Text>Email : {email}</Text>
         </Box>
       </Box>
     );
